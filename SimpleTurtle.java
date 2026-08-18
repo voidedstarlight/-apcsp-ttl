@@ -704,6 +704,15 @@ public class SimpleTurtle
 		}
 	}
 
+	public void circle(int sides, int size, double percent) {
+		int steps = (int)(sides * percent);
+
+		for (int i = 0; i < steps; i++) {
+			this.forward(size);
+			this.turn(360.0 / sides);
+		}
+	}
+
 	public void pinwheel(int sides, int size) {
 		for (int i = 0; i < sides; i++) {
 			polygon(sides, size);

@@ -704,22 +704,30 @@ public class SimpleTurtle
 		}
 	}
 
-	public void asterisk(int spokes, int size) {
-    double angle = (double) 360 / spokes;
-    for (int i = 0; i < spokes; i++) {
-        this.forward(size);
-        this.turn(180);
-        this.forward(size);
-        this.turn(180 + angle);
-    }
+	public void pinwheel(int sides, int size) {
+		for (int i = 0; i < sides; i++) {
+			polygon(sides, size);
+			this.turn(360.0 / sides);
+		}
+	}
+
+	public void asterisk(int spikes, int size) {
+		double angle = (double) 360 / spikes;
+
+		for (int i = 0; i < spikes; i++) {
+			this.forward(size);
+			this.turn(180);
+			this.forward(size);
+			this.turn(180 + angle);
+		}
 	}
 
 	public void star(int points, int size) {
-    double angle = 180.0 - (180.0 / points);
-    for (int i = 0; i < points; i++) {
-        this.forward(size);
-        this.turn(angle);
-    }
+		double angle = 180.0 - (180.0 / points);
+		for (int i = 0; i < points; i++) {
+			this.forward(size);
+			this.turn(angle);
+		}
 	}
-  
+
 } // end of class

@@ -17,6 +17,10 @@ public class Main {
 
 		t2.setPenWidth(5);
 		t2.star(5, 90);
+
+
+		Turtle t3 = new Turtle(500, 400, world);
+		t3.pinwheel(5, 50);
     // Turtle yertle = new Turtle(world);
     // // Add your code here
     // yertle.forward();

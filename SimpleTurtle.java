@@ -696,5 +696,30 @@ public class SimpleTurtle
     return this.name + " turtle at " + this.xPos + ", " + 
       this.yPos + " heading " + this.heading + ".";
   }
+
+	public void polygon(int sides, int size) {
+		for (int i = 0; i < sides; i++) {
+			this.forward(size);
+			this.turn((double) 360 / sides);
+		}
+	}
+
+	public void asterisk(int spokes, int size) {
+    double angle = (double) 360 / spokes;
+    for (int i = 0; i < spokes; i++) {
+        this.forward(size);
+        this.turn(180);
+        this.forward(size);
+        this.turn(180 + angle);
+    }
+	}
+
+	public void star(int points, int size) {
+    double angle = 180.0 - (180.0 / points);
+    for (int i = 0; i < points; i++) {
+        this.forward(size);
+        this.turn(angle);
+    }
+	}
   
 } // end of class
